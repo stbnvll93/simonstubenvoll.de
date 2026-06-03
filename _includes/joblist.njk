@@ -1,0 +1,12 @@
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+  {% for job in joblist %}
+    <div>
+      <h2>
+        <a href="{{ job.data.website }}" target="_blank" rel="noopener noreferrer">
+          {{ job.data.date | date }} | {{ job.data.title }} #
+        </a>
+      </h2>
+      <p>{{ job.data.description }}</p>
+    </div>
+  {% endfor %}
+</div>

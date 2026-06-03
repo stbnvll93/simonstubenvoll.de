@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    {% include "meta.njk" %}
+
+    <link rel="stylesheet" href="/style.css?v={% version %}">
+  </head>
+
+  <body class="container flex flex-col max-w-screen-xl min-h-screen">
+    {% include "header.njk" %}
+
+    <main class="flex-1 mt-10 mb-40" role="main">
+      {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+  </body>
+</html>

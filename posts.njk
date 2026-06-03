@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+permalink: /posts/
+eleventyNavigation:
+  key: Work
+  order: 2
+---
+
+<section class="space-y-6">
+  <h1>Work</h1>
+
+  {% set postlist = collections.posts %}
+  {% include "postlist.njk" %}
+</section>

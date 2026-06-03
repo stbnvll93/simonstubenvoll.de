@@ -1,0 +1,12 @@
+<div class="max-w-screen-md mx-auto space-y-8">
+  {% for post in postlist %}
+    <div>
+      <h2>
+        <a href="{{ post.data.website }}" target="_blank" rel="noopener noreferrer">
+          {{ post.data.date | date }} | {{ post.data.title }} #
+        </a>
+      </h2>
+      <p>{{ post.data.description }}</p>
+    </div>
+  {% endfor %}
+</div>

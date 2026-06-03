@@ -1,0 +1,19 @@
+<header class="flex flex-col items-center gap-6 py-5 sm:flex-row sm:justify-between sm:py-10" role="banner">
+  <a class="flex items-center hover:text-current" href="{{ '/' | url }}" rel="home" aria-label="go to homepage">
+    <img class="w-6 h-6 mr-2 rounded-full sm:h-12 sm:w-12" src="{{ '/img/avatar.jpg' | url }}">
+    <span class="font-serif">{{ metadata.title }}</span>
+  </a>
+
+  <ul class="flex gap-8 h-7">
+    {% for item in collections.all | eleventyNavigation %}
+      {% if item.url %}
+        {% set isCurrent = (item.url == page.url) %}
+        {% set isParent = item.url != '/' and item.url in page.url %}
+        <li>
+          <a class="font-serif {% if isCurrent or isParent %} text-red-400 {% endif %}"
+            href="{{ item.url | url }}"{% if isCurrent %}aria-current="page" {% endif %}>{{ item.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</header>

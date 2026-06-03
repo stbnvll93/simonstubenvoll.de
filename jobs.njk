@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+permalink: /jobs/
+eleventyNavigation:
+  key: CV
+  order: 1
+---
+
+<section class="space-y-6">
+  <h1>CV</h1>
+
+  {% set joblist = collections.jobs %}
+  {% include "joblist.njk" %}
+</section>

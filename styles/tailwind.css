@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Overpass:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50;
+    @apply dark:bg-slate-700;
+    @apply text-slate-600;
+    @apply dark:text-white;
+    @apply text-lg;
+  }
+  h1 {
+    @apply text-red-400;
+    @apply font-serif;
+    @apply text-5xl;
+    @apply sm:text-6xl;
+    @apply leading-relaxed;
+  }
+  h2 {
+    @apply text-2xl;
+    @apply font-serif;
+  }
+  h3 {
+    @apply text-xl;
+    @apply font-bold;
+  }
+  p a {
+    @apply underline;
+  }
+  a {
+    @apply hover:text-red-400;
+    @apply transition-colors;
+  }
+}
+
+/*
+NOTE: This is how I order my CSS properties!
+
+(1) Positioning
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+
+(2) Display & Box Model
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 10px solid #333;
+
+(3) Color
+  background: #000;
+  color: #fff;
+
+(4) Text
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: right;
+
+(5) Other
+  cursor: pointer;
+*/
