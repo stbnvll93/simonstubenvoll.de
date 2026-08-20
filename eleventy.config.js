@@ -1,9 +1,9 @@
-const pluginNavigation = require("@11ty/eleventy-navigation");
-const htmlmin = require("html-minifier");
+import pluginNavigation from '@11ty/eleventy-navigation';
+import htmlmin from 'html-minifier';
 
 const globs = { jobs: "jobs/**/*.md", posts: "posts/**/*.md" };
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
 
   eleventyConfig.addPassthroughCopy("img");
