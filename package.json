@@ -2,6 +2,7 @@
   "name": "simonstubenvoll.de",
   "version": "1.0.0",
   "description": "My personal website built with 11ty and Tailwind CSS.",
+  "type": "module",
   "scripts": {
     "start:eleventy": "eleventy --serve",
     "start:tailwind": "npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --watch",
