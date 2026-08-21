@@ -1,12 +1,11 @@
 {
   "name": "simonstubenvoll.de",
   "version": "1.0.0",
-  "description": "My personal website built with 11ty and Tailwind CSS.",
+  "description": "My personal website built with 11ty.",
   "type": "module",
   "scripts": {
-    "start:eleventy": "eleventy --serve",
-    "start:tailwind": "npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --watch",
-    "build": "eleventy & npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --minify"
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -17,12 +16,8 @@
     "url": "https://www.simonstubenvoll.de"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "@11ty/eleventy-navigation": "^1.0.5",
-    "autoprefixer": "^10.5.0",
-    "html-minifier": "^4.0.0",
-    "postcss": "^8.5.15",
-    "tailwindcss": "^3.4.19"
+    "@11ty/eleventy-navigation": "^1.0.5"
   }
 }
