@@ -1,15 +1,14 @@
-import pluginNavigation from '@11ty/eleventy-navigation';
-import htmlmin from 'html-minifier';
+import pluginNavigation from "@11ty/eleventy-navigation";
 
 const globs = { jobs: "jobs/**/*.md", posts: "posts/**/*.md" };
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
 
+  eleventyConfig.addPassthroughCopy("bundle.css");
   eleventyConfig.addPassthroughCopy("img");
 
-  eleventyConfig.addWatchTarget("./styles/tailwind.config.js");
-  eleventyConfig.addWatchTarget("./styles/tailwind.css");
+  eleventyConfig.addWatchTarget("bundle.css");
 
   // Collections
   eleventyConfig.addCollection("jobs", function (collection) {
@@ -37,21 +36,4 @@ export default async function (eleventyConfig) {
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
   });
-
-  // Transforms
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (
-      process.env.ELEVENTY_PRODUCTION &&
-      outputPath &&
-      outputPath.endsWith(".html")
-    ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
-      return minified;
-    }
-    return content;
-  });
-};
+}

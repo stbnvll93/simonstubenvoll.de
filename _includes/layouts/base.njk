@@ -8,13 +8,13 @@
 
     {% include "meta.njk" %}
 
-    <link rel="stylesheet" href="/style.css?v={% version %}">
+    <link rel="stylesheet" href="/bundle.css?v={% version %}">
   </head>
 
-  <body class="container flex flex-col max-w-screen-xl min-h-screen">
+  <body>
     {% include "header.njk" %}
 
-    <main class="flex-1 mt-10 mb-40" role="main">
+    <main>
       {{ content | safe }}
     </main>
 
