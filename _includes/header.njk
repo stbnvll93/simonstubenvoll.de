@@ -4,15 +4,17 @@
     <span>{{ metadata.title }}</span>
   </a>
 
-  <ul>
-    {% for item in collections.all | eleventyNavigation %}
-      {% if item.url %}
-        {% set isCurrent = (item.url == page.url) %}
-        {% set isParent = item.url != '/' and item.url in page.url %}
-        <li>
-          <a href="{{ item.url | url }}"{% if isCurrent %}aria-current="page" {% endif %}>{{ item.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  <nav>
+    <ul>
+      {% for item in collections.all | eleventyNavigation %}
+        {% if item.url %}
+          {% set isCurrent = (item.url == page.url) %}
+          {% set isParent = item.url != '/' and item.url in page.url %}
+          <li>
+            <a href="{{ item.url | url }}"{% if isCurrent %}aria-current="page" {% endif %}>{{ item.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
 </header>
