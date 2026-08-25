@@ -75,37 +75,14 @@ section {
   }
 }
 
-section.home {
+section {
   max-inline-size: 768px;
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1.25rem;
-    font-weight: 600;
-    gap: 0.25rem;
-    line-height: 1.75rem;
-    list-style: inside "#";
-    padding: 0;
-  }
 }
 
 .joblist {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-.postlist {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-inline: auto;
-  max-inline-size: 768px;
 }
 
 article {

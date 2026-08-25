@@ -16,11 +16,6 @@ export default async function (eleventyConfig) {
       .getFilteredByGlob(globs.jobs)
       .sort((a, b) => b.date - a.date);
   });
-  eleventyConfig.addCollection("posts", function (collection) {
-    return collection
-      .getFilteredByGlob(globs.posts)
-      .sort((a, b) => b.date - a.date);
-  });
 
   // Filters
   eleventyConfig.addFilter("date", function (iso) {
