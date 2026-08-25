@@ -53,6 +53,7 @@ header[role="banner"] {
     display: flex;
     gap: 2rem;
     list-style: none;
+    padding: 0;
 
     a[aria-current="page"] {
       color: #f87171;
