@@ -5,10 +5,10 @@ const globs = { jobs: "jobs/**/*.md", posts: "posts/**/*.md" };
 export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
 
-  eleventyConfig.addPassthroughCopy("bundle.css");
+  eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("img");
 
-  eleventyConfig.addWatchTarget("bundle.css");
+  eleventyConfig.addWatchTarget("css");
 
   // Collections
   eleventyConfig.addCollection("jobs", function (collection) {

@@ -1,0 +1,142 @@
+body {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  margin-inline: auto;
+  max-inline-size: 1280px;
+  min-block-size: 100dvh;
+  padding-inline: 2rem;
+
+  @media (min-width: 640px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+header[role="banner"] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Bree Serif", serif;
+  gap: 1.5rem;
+  padding-block: 1.25rem;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 2.5rem;
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    text-decoration-line: none;
+
+    &:has(img) {
+      color: currentColor;
+    }
+  }
+
+  img {
+    block-size: 1.5rem;
+    border-radius: calc(infinity * 1px);
+    inline-size: 1.5rem;
+
+    @media (min-width: 640px) {
+      block-size: 3rem;
+      inline-size: 3rem;
+    }
+  }
+
+  ul {
+    block-size: 1.75rem;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+    a[aria-current="page"] {
+      color: #f87171;
+    }
+  }
+}
+
+main {
+  flex: 1 1 0%;
+  margin-block: 2.5rem 10rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  h2 a {
+    text-decoration-line: none;
+  }
+}
+
+section.home {
+  max-inline-size: 768px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    font-weight: 600;
+    gap: 0.25rem;
+    line-height: 1.75rem;
+    list-style: inside "#";
+    padding: 0;
+  }
+}
+
+.joblist {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.postlist {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-inline: auto;
+  max-inline-size: 768px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-inline: auto;
+  max-inline-size: 768px;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font:
+    0.875rem/1.25rem "Bree Serif",
+    serif;
+  gap: 1.5rem;
+  padding-block: 1.25rem;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  a {
+    text-decoration-line: none;
+  }
+
+  span {
+    display: flex;
+    gap: 0.25rem;
+  }
+}
